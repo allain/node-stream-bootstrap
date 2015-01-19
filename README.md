@@ -1,6 +1,6 @@
 # stream-bootstrap
 
-A stream which wires itself up based on the first data it receives. Like building an airplain while it's flying.
+A stream which wires itself up based on the first data it receives. Aka building an airplaine while it's flying.
 
 [![build status](https://secure.travis-ci.org/allain/node-stream-bootstrap.png)](http://travis-ci.org/allain/node-stream-bootstrap)
 

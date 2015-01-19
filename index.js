@@ -1,7 +1,6 @@
-var debug= require('debug')('stream-bootstrap');
+var debug = require('debug')('stream-bootstrap');
 
 var Writable = require('stream').Writable;
-var assert = require('assert');
 
 var duplexer = require('duplexer');
 var through = require('through2').obj;
@@ -21,7 +20,7 @@ function bootstrap(fn) {
   decider._write = function(chunk, encoding, cb) {
     input.unpipe(decider);
 
-    fn(chunk, encoding, function(err, stream) {      
+    fn(chunk, encoding, function(err, stream) {
       if (err) return cb(err);
 
       if (!stream) {
@@ -29,7 +28,6 @@ function bootstrap(fn) {
       }
 
       if (stream._read) {
-        debug('wiring up duplex stream');
         // Wire the input and output to the new stream
         input.pipe(stream).pipe(output);
       } else {
