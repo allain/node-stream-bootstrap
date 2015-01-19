@@ -1,0 +1,33 @@
+{
+  "name": "stream-bootstrap",
+  "version": "0.1.0",
+  "description": "A stream which replaces itself by building its replacement by running logic on its first received piece of data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allain/node-stream-bootstrap"
+  },
+  "keywords": [
+    "stream",
+    "dynamic",
+    "bootstrap"
+  ],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allain/node-stream-bootstrap/issues"
+  },
+  "dependencies": {
+    "debug": "^2.1.1",
+    "duplexer": "^0.1.1",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "stream-array": "^1.0.1",
+    "writable": "^0.1.0"
+  }
+}
