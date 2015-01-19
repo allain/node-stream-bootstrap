@@ -1,8 +1,7 @@
 var assert = require('assert');
+
 var streamify = require('stream-array');
 var writable = require('writable');
-var Stream = require('stream');
-var os = require('os');
 var through = require('through2').obj;
 
 var bootstrap = require('..');
@@ -46,7 +45,7 @@ describe('stream-bootstrap', function() {
 
   // Skipped until I can figure out how to intercept the error properly
   it.skip('emits error if no stream generated', function(done) {
-    streamify(['a', 1, os.EOL]).pipe(bootstrap(function(data, encoding, cb) {
+    streamify(['a', 1]).pipe(bootstrap(function(data, encoding, cb) {
       cb();
     })).on('error', function(err) {
       assert(err, 'expected error');
