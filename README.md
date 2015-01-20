@@ -9,7 +9,7 @@ A stream which wires itself up based on the first data it receives. Aka building
 This module is installed via npm:
 
 ``` bash
-$ npm install stream-initilizer
+$ npm install stream-bootstrap
 ```
 
 ## Example Usage
