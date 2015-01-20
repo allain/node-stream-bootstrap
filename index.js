@@ -15,7 +15,7 @@ function bootstrap(fn) {
 
   // Single serving stream that replaces itself based on the
   // value of the first chunk it receives
-  var decider = new Writable();
+  var decider = new Writable({objectMode: true});
 
   decider._write = function(chunk, encoding, cb) {
     input.unpipe(decider);
