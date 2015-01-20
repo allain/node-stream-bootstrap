@@ -1,6 +1,6 @@
 {
   "name": "stream-bootstrap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A stream which replaces itself by building its replacement by running logic on its first received piece of data.",
   "main": "index.js",
   "scripts": {
